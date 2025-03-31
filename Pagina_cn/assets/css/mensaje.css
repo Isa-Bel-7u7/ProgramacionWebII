@@ -1,0 +1,41 @@
+.mensaje {
+    padding: 4rem 2rem;
+    background-color: #f9f9f9;
+}
+
+.mensaje__lista {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.mensaje__item {
+    max-width: 300px;
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    animation: fadeIn 1s ease; 
+}
+
+.mensaje__item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.mensaje__item__titulo {
+    color: #333;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+}
+
+.mensaje__item__texto {
+    line-height: 1.6;
+    font-family: 'Montserrat', sans-serif;
+    color: #666;
+}

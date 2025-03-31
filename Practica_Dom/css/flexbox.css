@@ -1,0 +1,56 @@
+/* Flexbox specific styles */
+.headerPrincipal {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.headerPrincipal-nav {
+    display: flex;
+    gap: 15px;
+}
+
+.contenidoPrincipal-productos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+}
+
+.videoSobre .container {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.rodapePrincipal-patrocinadores-list {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.rodapePrincipal-contatoForm-fieldset {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+@media (min-width: 769px) {
+    .headerPrincipal-nav {
+        gap: 20px;
+    }
+
+    .contenidoPrincipal-productos {
+        justify-content: space-between;
+    }
+
+    .videoSobre .container {
+        flex-direction: row;
+    }
+}
+
+@media (min-width: 1000px) {
+    .contenidoPrincipal-productos {
+        justify-content: flex-start;
+    }
+}

@@ -1,0 +1,310 @@
+body {
+    background-color: #faf6f9;
+    font-family: 'Times New Roman', serif;
+    line-height: 1.6;
+    color: #333;
+}
+
+.container {
+    width: 94%;
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+.headerPrincipal {
+    background-color: #ffa7cc;
+    padding: 20px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.headerPrincipal-titulo {
+    font-weight: bold;
+    font-size: 2em;
+    margin: 0;
+}
+
+.headerPrincipal-titulo a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.headerPrincipal-nav {
+    display: flex;
+    gap: 15px;
+}
+
+.headerPrincipal-nav-link {
+    padding: 10px 15px;
+    color: #a0346e;
+    background-color: #ff8c91;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.headerPrincipal-nav-link:hover {
+    background-color: #a0346e;
+    color: #fff;
+}
+
+.contenidoPrincipal {
+    margin: 20px 0;
+}
+
+.subtitulo {
+    font-weight: bold;
+    font-size: 32px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.contenidoPrincipal-productos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+}
+
+.contenidoPrincipal-productos-link {
+    flex: 1 1 calc(33.333% - 20px);
+    background-color: #fff;
+    text-align: center;
+    padding: 20px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contenidoPrincipal-productos-link:hover {
+    transform: translateY(-5px);
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.contenidoPrincipal-productos-link a {
+    text-decoration: none;
+    color: #000;
+    font-weight: bold;
+}
+
+.videoSobre {
+    background-color: #ffc4a6;
+    padding: 25px 0;
+    text-align: center;
+}
+
+.videoSobre-video {
+    max-width: 100%;
+    height: auto;
+}
+
+.videoSobre-sobre {
+    margin-top: 20px;
+}
+
+.videoSobre-sobre-title {
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.videoSobre-sobre-list {
+    list-style: none;
+    padding: 0;
+}
+
+.videoSobre-sobre-item {
+    margin-bottom: 10px;
+}
+
+.videoSobre-button {
+    background-color: #ec6e5a;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.videoSobre-button:hover {
+    background-color: #d45a4a;
+}
+
+.rodapePrincipal {
+    background-color: #23292d;
+    color: #fff;
+    padding: 20px 0;
+}
+
+.rodapePrincipal-navMap {
+    margin-bottom: 20px;
+}
+
+.navmap-list-title {
+    font-weight: bold;
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+.rodapePrincipal-navMap-link {
+    color: #fff;
+    text-decoration: none;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.rodapePrincipal-navMap-link:hover {
+    text-decoration: underline;
+}
+
+.rodapePrincipal-patrocinadores {
+    background-color: #f2f5f7;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.rodapePrincipal-patrocinadores-list {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    list-style: none;
+    padding: 0;
+}
+
+.rodapePrincipal-contatoForm {
+    margin-top: 20px;
+}
+
+.rodapePrincipal-contatoForm-legend {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.rodapePrincipal-contatoForm-emailInput {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 200px;
+}
+
+.rodapePrincipal-contatoForm-submit {
+    padding: 10px 20px;
+    background-color: #4DBA7A;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.rodapePrincipal-contatoForm-submit:hover {
+    background-color: #3da769;
+}
+
+@media (min-width: 769px) {
+    .container {
+        width: 85%;
+    }
+
+    .headerPrincipal-nav-link {
+        margin: 0;
+    }
+
+    .contenidoPrincipal-productos-link {
+        flex: 1 1 calc(25% - 20px);
+    }
+
+    .videoSobre .container {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .videoSobre-sobre {
+        text-align: left;
+    }
+}
+
+@media (min-width: 1000px) {
+    .contenidoPrincipal-productos-link {
+        flex: 1 1 calc(20% - 20px);
+    }
+}
+
+/* Añade esto al final de tu archivo CSS */
+
+/* Efectos hover mejorados */
+.contenidoPrincipal-productos-link {
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.contenidoPrincipal-productos-link::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+    transition: 0.5s;
+}
+
+.contenidoPrincipal-productos-link:hover::before {
+    left: 100%;
+}
+
+.videoSobre-button {
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.videoSobre-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+.videoSobre-button:active {
+    transform: translateY(-1px);
+}
+
+.rodapePrincipal-contatoForm-emailInput {
+    transition: all 0.3s ease;
+    border: 2px solid #ddd;
+}
+
+.rodapePrincipal-contatoForm-emailInput:focus {
+    border-color: #4DBA7A;
+    outline: none;
+    box-shadow: 0 0 5px rgba(77, 186, 122, 0.5);
+}
+
+.videoSobre-video {
+    width: 100%;
+    height: auto;
+    min-height: 315px;
+}
+
+@media (max-width: 768px) {
+    .videoSobre .container {
+        flex-direction: column;
+    }
+    
+    .rodapePrincipal-navMap-list {
+        column-count: 2;
+    }
+}
+
+
+.rodapePrincipal-patrocinadores-list-link img {
+    transition: transform 0.3s ease;
+    filter: grayscale(30%);
+}
+
+.rodapePrincipal-patrocinadores-list-link:hover img {
+    transform: scale(1.1);
+    filter: grayscale(0%);
+}
