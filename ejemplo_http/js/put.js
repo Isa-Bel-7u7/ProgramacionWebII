@@ -4,7 +4,7 @@ const putData=()=>{
         descripcion: "actualizado",
         fecha: new Date().toISOString()
     };
-    fetch(`${API_URL}/2`,{
+    fetch(`${API_URL}/1`,{
         method: "PUT",
         Headers: {
             "Content-Type":"application/json",

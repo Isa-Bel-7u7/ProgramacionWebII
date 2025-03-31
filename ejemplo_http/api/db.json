@@ -7,10 +7,16 @@
       "fecha": "2025-03-27"
     },
     {
-      "id": "1",
-      "titulo": "Nuevo Post Creado",
-      "descripcion": "CONTENIDO",
-      "fecha": "2025-03-27"
+      "titulo": "Actualizado",
+      "descripcion": "actualizado",
+      "fecha": "2025-03-31T12:25:35.854Z",
+      "id": "1"
+    },
+    {
+      "id": "05c9",
+      "titulo": "Nuevo Post",
+      "descripcion": "nueva descripcion",
+      "fecha": "2025-03-31T12:25:37.687Z"
     }
   ]
 }
