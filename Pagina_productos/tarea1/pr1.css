@@ -1,0 +1,26 @@
+body {
+    background-color: #fff7e5;
+  }
+section{
+    background-color: #fecdd0;
+}
+  h1 {
+    color: #f5a3af;
+    text-align: center;
+  }
+  
+  p {
+    font-family:cursive;
+    font-size: 30px;
+    color: #59483e;
+  }
+  hr{
+    color: #fecdd0;
+  }
+  nav{
+    font: italic 1.2rem "Fira Sans", serif;
+  }
+  img{
+    width: auto;
+    height: auto;
+  }
