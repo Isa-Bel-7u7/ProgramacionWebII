@@ -1,0 +1,191 @@
+/* Estilos generales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Dosis', sans-serif;
+  }
+  
+  body {
+    background-color: #f4f4f4;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+  }
+  
+  /* Contenedor principal */
+  main {
+    background-image: linear-gradient(
+      109.6deg,
+      rgba(62, 161, 219, 1) 11.2%,
+      rgba(93, 52, 236, 1) 100.2%
+    );
+    width: 100vw;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 20px;
+  }
+  
+  /* Formulario */
+  .formContainer {
+    width: 80vw;
+    max-width: 600px;
+    border-radius: 25px;
+    background-color: #fff;
+    padding: 25px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 15px;
+  }
+  
+  .inputForm {
+    border: 1px solid #ddd;
+    padding: 10px;
+    border-radius: 5px;
+    outline: none;
+    width: 100%;
+    margin-bottom: 10px;
+    font-size: 16px;
+  }
+  
+  .inputForm::placeholder {
+    color: #aaa;
+  }
+  
+  .btnCreate {
+    padding: 10px 15px;
+    background-image: linear-gradient(
+      109.6deg,
+      rgba(62, 161, 219, 1) 11.2%,
+      rgba(93, 52, 236, 1) 100.2%
+    );
+    border: none;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    width: 100%;
+    transition: background-color 0.3s ease;
+  }
+  
+  .btnCreate:hover {
+    background-image: linear-gradient(
+      109.6deg,
+      rgba(62, 161, 219, 1) 5%,
+      rgba(93, 52, 236, 1) 80%
+    );
+  }
+  
+  /* Contenedores de contenido */
+  .contentContainer {
+    width: 80vw;
+    max-width: 1200px;
+    display: flex;
+    gap: 20px; /* Espacio entre la tabla y las tarjetas */
+    flex-wrap: wrap;
+  }
+  
+  .tableContainer {
+    flex: 2;
+    border-radius: 25px;
+    background-color: #fff;
+    padding: 25px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .tableContainer h2 {
+    text-align: center;
+    margin-bottom: 15px;
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+  }
+  
+  table th,
+  table td {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  table th {
+    background-color: #f8f9fa;
+    font-weight: bold;
+  }
+  
+  .actions button {
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+  }
+  
+  .actions button.view {
+    background-color: #28a745;
+    color: #fff;
+  }
+  
+  .actions button.delete {
+    background-color: #dc3545;
+    color: #fff;
+  }
+  
+  .actions button:hover {
+    opacity: 0.9;
+  }
+  
+  .cardsContainer {
+    flex: 1;
+    max-height: 500px; 
+    border-radius: 25px;
+    background-color: #fff;
+    padding: 25px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow-y: auto; 
+  }
+  
+  .cardsContainer h2 {
+    text-align: center;
+    margin-bottom: 15px;
+  }
+  
+  #taskCards {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .taskCard {
+    padding: 15px;
+    border-radius: 8px;
+    background-color: #f8f9fa;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .taskCard p {
+    margin: 5px 0;
+  }
+  
+  .taskCard p strong {
+    font-weight: bold;
+  }
+  
+  .completed {
+    text-decoration: line-through;
+    color: #aaa;
+  }

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Evaluación DOM</title>
+  <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+  <div id="container">
+    <h2>Lista de Tareas</h2>
+    <input type="text" id="newItem" data-new-task placeholder="Nueva tarea">
+    <button id="addBtn" data-add-btn>Agregar</button>
+    <ul id="taskList" data-task-list>
+      <li class="item" data-task-item>Tarea de ejemplo 1</li>
+      <li class="item" data-task-item>Tarea de ejemplo 2</li>
+    </ul>
+  
+    <div id="controls">
+      <button id="toggleBtn" data-toggle-btn>Tachar Último</button>
+      <button id="countBtn" data-count-btn>Contar Items</button>
+    </div>
+    <div id="output" data-output></div>
+  </div>
+  
+  <script src="componentes/agregar.js"></script>
+  <script src="componentes/relleno.js"></script>
+  <script src="componentes/tacharUltimo.js"></script>
+  <script src="componentes/contador.js"></script>
+  <script src="componentes/eliminar.js"></script>
+</body>
+</html>
