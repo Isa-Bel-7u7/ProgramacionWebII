@@ -1,0 +1,148 @@
+import { clientService } from "../service/client-service.js";
+const formulario = document.querySelector("[data-form]")
+
+// import { mascotaService } from "../service/mascota-service.js";
+
+// const obtenerInfo = async () => {
+//     const url = new URL(window.location);
+//     const id = url.searchParams.get("id");
+//     if (!id) {
+//         window.location.href = "../screens/error_pets.html";
+//     }
+//     const nombre = document.querySelector("[data-nombre-mascota]");
+//     const especie = document.querySelector("[data-especie-mascota]");
+//     const edad = document.querySelector("[data-raza-mascota]");
+//     const id_cliente = document.querySelector("[data-dueño-mascota]");
+
+//     try {
+//         const mascota = await mascotaService.obtenerMascota(id);
+//         if (mascota.nombre && mascota.especie && mascota.edad && mascota.id_cliente) {
+//             nombre.value = mascota.nombre;
+//             especie.value = mascota.especie;
+//             raza.value = mascota.edad;
+//             dueño.value = mascota.id_cliente;
+//         } else {
+//             throw new Error();
+//         }
+//     } catch (error) {
+//         console.log("Error:", error);
+//         window.location.href = "../screens/error_pets.html";
+//     }
+// };
+
+// obtenerInfo();
+
+// const formulario = document.querySelector("[data-form-mascota]");
+// formulario.addEventListener("submit", (evento) => {
+//     evento.preventDefault();
+//     const url = new URL(window.location);
+//     const id = url.searchParams.get("id");
+//     const nombre = document.querySelector("[data-nombre-mascota]").value;
+//     const especie = document.querySelector("[data-especie-mascota]").value;
+//     const edad = document.querySelector("[data-edad-mascota]").value;
+//     const id_cliente = document.querySelector("[data-id_cliente-mascota]").value;
+
+//     mascotaService
+//         .actualizarMascota(nombre, especie, edad, id_cliente, id)
+//         .then(() => {
+//             window.location.href = "../screens/edicion_concluida_mascota.html";
+//         })
+//         .catch((error) => {
+//             console.log(error);
+//             window.location.href = "../screens/error_pets.html";
+//         });
+// });
+//
+/*const obtenerInfo=()=>{
+    const url = new URL(window.location);
+    const id = (url.searchParams.get('id'));
+    if(id==null){
+        window.location.href="../screens/error.html"
+    }
+    const nombre =document.querySelector("[data-nombre]")
+    const email = document.querySelector("[data-email]")
+
+clientService.clientes(id).then((perfil)=>{
+    nombre.value=perfil.nombre;
+    email.value=perfil.email;
+});
+    
+};
+
+obtenerInfo();
+*/
+//obtener informacion con async
+//----------------- Nuevo Obtener Info ------------- con async
+/*const obtenerInfo= async()=>{//estructura async
+    const url=new URL(window.location);// nueva url
+    const id= (url.searchParams.get("id"));// url con identificador
+    if(id==null){
+        window.location.href="../screen/error.html"// si no recupera el id pues error 
+
+    }
+    const nombre = document.querySelector("[data-nombre]")//recuperamos datos
+    const email = document.querySelector("[data-email]")
+try{
+    const perfil = await  clientService.clientes(id)// await que se mantiene en espera mientras almacena el id 
+if(perfil.nombre && perfil.email){
+    nombre.value=perfil.nombre;
+    email.value=perfil.email;
+}else{
+    throw new Error();
+    
+}
+    
+}catch(error){
+    console.log("Catch error",error);
+    window.location.href="../screens/error.html"
+}
+};
+obtenerInfo();
+//-----------------------------------------
+formulario.addEventListener("submit",(evento)=>{
+    evento.preventDefault();
+    const url = new URL(window.location)
+    const id =(url.searchParams.get("id"));
+
+    const nombre= document.querySelector('[data-nombre]').value;
+    const email= document.querySelector('[data-email]').value;
+    clientService.actualizarCliente(nombre,email,id).then(()=>{
+        window.location.href="../screens/edicion_concluida.html";
+    });
+})*/
+const obtenerInfo = async () => {
+    const url = new URL(window.location);
+    const id = url.searchParams.get("id");
+    if (id == null) {
+        window.location.href = "../screens/error.html";
+        return;
+    }
+    const nombre = document.querySelector("[data-nombre]");
+    const email = document.querySelector("[data-email]");
+    try {
+        const clientesArray = await clientService.clientes(id);
+        const clientes = clientesArray[0];
+        if (clientes && clientes.nombre && clientes.email) {
+            nombre.value = clientes.nombre;
+            email.value = clientes.email;
+        } else {
+            throw new Error();
+        }
+    } catch (error) {
+        console.log("Catch error", error);
+        window.location.href = "../screens/error.html";
+    }
+};
+obtenerInfo();
+//-----------------------------------------
+formulario.addEventListener("submit",(evento)=>{
+    evento.preventDefault();
+    const url = new URL(window.location)
+    const id =(url.searchParams.get("id"));
+
+    const nombre= document.querySelector('[data-nombre]').value;
+    const email= document.querySelector('[data-email]').value;
+    clientService.actualizarCliente(nombre,email,id).then(()=>{
+        window.location.href="../screens/edicion_concluida.html";
+    });
+})
