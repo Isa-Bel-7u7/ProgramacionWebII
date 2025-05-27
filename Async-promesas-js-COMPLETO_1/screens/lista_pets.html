@@ -38,30 +38,18 @@
         </header>
 
         <main class="clientes-container">
-            <div class="buscador-container" style="margin-bottom: 20px; display: flex; gap: 10px;">
-  <input
-    type="text"
-    id="buscador-productos"
-    class="input buscador-input-grande"
-    style="flex: 1; min-width: 250px; font-size: 1.1em; padding: 10px;"
-    placeholder="Buscar producto por nombre o precio"
-    data-buscador
-  />
-  <button class="simple-button buscador-boton-grande" type="button" id="btn-buscar-productos">
-    Buscar
-  </button>
-</div>
         <table class="table">
             <thead>
             <tr>
                 <th class="table__column--n">Nombre</th>
-            <th class="table__column--pe">Precio</th>
-            <th class="table__column--d">Descripcion</th>
+            <th class="table__column--pe">Especie</th>
+            <th class="table__column--d">Edad</th>
+            <th class="table__column--c">Nombre Cliente</th>
                 <th class="table__column--m table__align--right">
                 <a
-                    href="./registrar_producto.html"
+                    href="./registrar_mascota.html"
                     class="simple-button simple-button--add"
-                    >Nuevo Producto</a
+                    >Nueva Mascota</a
                 >
                 </th>
             </tr>
@@ -85,5 +73,5 @@
         </div>
         </main>
     </body>
-    <script type="module" src="../controllers/producto_controller.js"></script>
+    <script type="module" src="../controllers/mascota_controller.js"></script>
 </html>

@@ -1,0 +1,160 @@
+/* --- Fondo y fuente --- */
+body {
+  background: #23252b;
+  color: #ffe9b0;
+  margin: 0;
+  font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+/* --- Encabezado y navegación --- */
+.header {
+  background: #18191c;
+  color: #ffe9b0;
+  padding: 1.5rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header__nav {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+  margin: 0;
+  padding: 0;
+}
+
+.header__nav a {
+  color: #ffe9b0;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.1rem;
+  transition: color 0.2s;
+}
+
+.header__nav a:hover {
+  color: #a3ffb0;
+}
+
+/* --- Main y secciones --- */
+main {
+  padding: 2rem;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.busqueda-section {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  justify-content: center;
+}
+
+.busqueda-section input[type="text"] {
+  padding: 0.8rem 1.2rem;
+  border: 2px solid #ffe9b0;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  width: 350px;
+  background: #23252b;
+  color: #ffe9b0;
+  transition: border 0.2s;
+}
+
+.busqueda-section input[type="text"]:focus {
+  border-color: #a3ffb0;
+  outline: none;
+}
+
+.busqueda-section button {
+  padding: 0.8rem 2.2rem;
+  background: linear-gradient(90deg, #ffe9b0 60%, #7fc97f 100%);
+  color: #23252b;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+  box-shadow: 0 2px 8px rgba(255,233,176,0.07);
+}
+
+.busqueda-section button:hover {
+  background: linear-gradient(90deg, #ffe9b0 40%, #4caf50 100%);
+  color: #fff;
+}
+
+.tabla-section {
+  background: #23252b;
+  border-radius: 12px;
+  box-shadow: 0 2px 16px rgba(0,0,0,0.18);
+  padding: 1.5rem 1rem;
+  margin: 0 auto;
+  max-width: 1100px;
+}
+
+.tabla-peliculas {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  margin-top: 0.5rem;
+  background: #23252b;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 2px 16px rgba(0,0,0,0.18);
+}
+
+.tabla-peliculas th,
+.tabla-peliculas td {
+  padding: 1.1rem 1.3rem;
+  border-bottom: 1px solid #35363b;
+  text-align: left;
+  color: #ffe9b0;
+  font-size: 1.08rem;
+}
+
+.tabla-peliculas th {
+  background: #23252b;
+  color: #ffe9b0;
+  font-weight: bold;
+  letter-spacing: 1px;
+  border-bottom: 2px solid #ffe9b0;
+}
+
+.tabla-peliculas tr:last-child td {
+  border-bottom: none;
+}
+
+/* --- Bot
+ --- */
+.simple-button {
+  padding: 0.4rem 1.1rem;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-right: 0.3rem;
+  transition: background 0.2s, color 0.2s;
+}
+
+.simple-button--edit {
+  background: #ffe9b0;
+  color: #23252b;
+  font-weight: bold;
+}
+
+.simple-button--edit:hover {
+  background: #a3ffb0;
+  color: #23252b;
+}
+
+.simple-button--delete {
+  background: #e57373;
+  color: #fff;
+  font-weight: bold;
+}
+
+.simple-button--delete:hover {
+  background: #b52a37;
+  color: #fff;
+}

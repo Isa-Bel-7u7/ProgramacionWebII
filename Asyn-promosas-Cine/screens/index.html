@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Registrar Película</title>
+  <link rel="stylesheet" href="../assets/styles.css" />
+</head>
+<body>
+  <header class="header">
+    <img src="../assets/img/doguitoadm.svg" alt="Logo Cine" class="header__logo" />
+    <h1 class="header__title">Sala de Cines</h1>
+    <nav>
+      <ul class="header__nav">
+        <li><a href="#">Dashboard</a></li>
+        <li><a href="lista_peliculas.html">Películas</a></li>
+        <li><a href="lista_clientes.html">Clientes</a></li>
+        <li><a href="lista_salas.html">Salas</a></li>
+        <li><a href="#">Boletos</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="form-section">
+      <h2>Registrar Nueva Película y Función</h2>
+      ...
+<form class="pelicula-form" data-form>
+  <fieldset>
+    <legend>Información de la Película</legend>
+    <div class="form-group">
+      <label for="nombre">Nombre</label>
+      <input type="text" id="nombre" name="nombre" required data-nombre />
+    </div>
+    <div class="form-group">
+      <label for="director">Director</label>
+      <input type="text" id="director" name="director" required data-director />
+    </div>
+    <div class="form-group">
+      <label for="precio">Precio</label>
+      <input type="number" id="precio" name="precio" step="0.01" required data-precio />
+    </div>
+    <div class="form-group">
+      <label for="anio">Año</label>
+      <input type="number" id="anio" name="anio" min="1900" max="2100" required data-anio />
+    </div>
+  </fieldset>
+
+  <fieldset>
+    <legend>Información de la Función</legend>
+    <div class="form-group">
+      <label for="fecha">Fecha de la Función</label>
+      <input type="date" id="fecha" name="fecha" required data-fecha />
+    </div>
+    <div class="form-group">
+      <label for="hora_inicio">Hora de Inicio</label>
+      <input type="time" id="hora_inicio" name="hora_inicio" required data-hora-inicio />
+    </div>
+    <div class="form-group">
+      <label for="hora_fin">Hora de Fin</label>
+      <input type="time" id="hora_fin" name="hora_fin" required data-hora-fin />
+    </div>
+    <div class="form-group">
+      <label for="id_nro_sala">Número de Sala</label>
+      <select id="id_nro_sala" name="id_nro_sala" required data-id-nro-sala>
+        <option value="">Seleccione una sala</option>
+        <option value="1">Sala 1</option>
+        <option value="2">Sala 2</option>
+        <option value="3">Sala 3</option>
+      </select>
+    </div>
+  </fieldset>
+
+  <button type="submit" class="btn-registrar">Registrar Película y Función</button>
+</form>
+...
+    </section>
+  </main>
+
+  <script type="module" src="../controllers/peliculas_form_controller.js"></script>
+</body>
+</html>

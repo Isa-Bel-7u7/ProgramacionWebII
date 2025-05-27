@@ -83,3 +83,22 @@ mascotaService.listarMascotas()
         console.error("Error al cargar las mascotas:", error);
         alert("Ocurrió un error al cargar las mascotas");
     });
+
+
+
+//buscador
+const buscador = document.querySelector('#buscador-mascotas');
+const btnBuscar = document.querySelector('#btn-buscar-mascotas');
+const tabla = document.querySelector('[data-table]');
+
+function filtrarMascotas() {
+    const filtro = buscador.value.toLowerCase();
+    const filas = tabla.querySelectorAll('tr');
+    filas.forEach(fila => {
+        const textoFila = fila.textContent.toLowerCase();
+        fila.style.display = textoFila.includes(filtro) ? '' : 'none';
+    });
+}
+
+buscador.addEventListener('input', filtrarMascotas);
+btnBuscar.addEventListener('click', filtrarMascotas);

@@ -1,0 +1,181 @@
+/* ======== ESTILOS GENERALES ======== */
+body {
+    background: linear-gradient(120deg, #232526 0%, #414345 100%);
+    font-family: 'Segoe UI', 'Arial', sans-serif;
+    margin: 0;
+    color: #f7e9c6;
+}
+
+/* ======== ENCABEZADO ======== */
+.header {
+    background: #1a1a1a;
+    color: #f7e9c6;
+    padding: 2rem 0 1rem 0;
+    text-align: center;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.15);
+}
+
+.header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+    letter-spacing: 2px;
+}
+
+.nav {
+    list-style: none;
+    padding: 0;
+    margin-top: 1rem;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.nav li a {
+    color: #f7e9c6;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.1rem;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    transition: background 0.2s, color 0.2s;
+}
+
+.nav li a:hover {
+    background-color: #bfa77a;
+    color: #232526;
+}
+
+/* ======== CONTENIDO PRINCIPAL ======== */
+main {
+    max-width: 1000px;
+    margin: 3rem auto;
+    padding: 0 1rem;
+}
+
+/* ======== BUSCADOR ======== */
+.busqueda-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 2rem;
+}
+
+.busqueda-section input {
+    padding: 0.9rem 1rem;
+    min-width: 280px;
+    border: 2px solid #bfa77a;
+    border-radius: 10px;
+    background: #2e2e2e;
+    color: #f7e9c6;
+    font-size: 1rem;
+    transition: border-color 0.3s;
+}
+
+.busqueda-section input:focus {
+    border-color: #f7e9c6;
+    outline: none;
+}
+
+.busqueda-section button {
+    background: linear-gradient(90deg, #bfa77a 0%, #4b7b50 100%);
+    color: #232526;
+    border: none;
+    border-radius: 10px;
+    padding: 0.9rem 1.5rem;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.busqueda-section button:hover {
+    background: linear-gradient(90deg, #4b7b50 0%, #bfa77a 100%);
+}
+
+/* ======== TABLA ======== */
+.tabla-section {
+    overflow-x: auto;
+}
+
+.tabla-peliculas {
+    width: 100%;
+    border-collapse: collapse;
+    background: #2d2d2d;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.2);
+}
+
+.tabla-peliculas thead {
+    background: #bfa77a;
+    color: #232526;
+}
+
+.tabla-peliculas th, .tabla-peliculas td {
+    padding: 1rem;
+    text-align: left;
+    font-size: 1rem;
+}
+
+.tabla-peliculas th {
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.tabla-peliculas tr:nth-child(even) {
+    background: #2c2c2c;
+}
+
+.tabla-peliculas tr:nth-child(odd) {
+    background: #353535;
+}
+
+.tabla-peliculas td {
+    color: #f7e9c6;
+}
+
+.tabla-peliculas td:last-child {
+    text-align: center;
+}
+
+/* ======== HOVER FILA ======== */
+.tabla-peliculas tr:hover {
+    background: #4b7b5070;
+}
+
+/* ======== BOTONES DE AC ======== */
+.boton-accion {
+    background-color: #bfa77a;
+    color: #232526;
+    border: none;
+    border-radius: 6px;
+    padding: 0.4rem 0.8rem;
+    font-size: 0.9rem;
+    font-weight: bold;
+    cursor: pointer;
+    margin: 0 0.2rem;
+    transition: background 0.3s;
+}
+
+.boton-accion:hover {
+    background-color: #e0c689;
+}
+
+@media (max-width: 768px) {
+    .nav {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .tabla-peliculas th, .tabla-peliculas td {
+        font-size: 0.9rem;
+        padding: 0.7rem;
+    }
+
+    .busqueda-section {
+        flex-direction: column;
+    }
+}

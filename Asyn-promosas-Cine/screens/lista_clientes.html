@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Lista de Clientes</title>
+  <link rel="stylesheet" href="../assets/stylesclientes.css" />
+  
+</head>
+<body>
+  <header class="header">
+    <h1>Lista de Clientes</h1>
+    <nav>
+      <ul class="header__nav">
+        <li><a href="index.html">Películas</a></li>
+        <li><a href="clientes.html">Registrar Cliente</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="busqueda-section">
+      <input type="text" placeholder="Buscar por nombre o email..." data-buscador-clientes>
+      <button data-btn-buscar-clientes>Buscar</button>
+    </section>
+    <section class="tabla-section">
+      <table class="tabla-peliculas">
+        <thead>
+          <tr>
+            <th>Nombre</th>
+            <th>Email</th>
+            <th>Acciones</th>
+          </tr>
+        </thead>
+        <tbody data-table>
+          <!-- Aquí se insertarán dinámicamente las filas con JavaScript -->
+        </tbody>
+      </table>
+    </section>
+  </main>
+  <script type="module" src="../controllers/clientes_controller.js"></script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Registrar Cliente</title>
+  <link rel="stylesheet" href="../assets/styles.css" />
+</head>
+<body>
+  <header class="header">
+    <h1>Clientes</h1>
+    <nav>
+      <ul class="header__nav">
+        <li><a href="index.html">Películas</a></li>
+        <li><a href="lista_clientes.html">Lista de Clientes</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="form-section">
+      <h2>Registrar / Editar Cliente</h2>
+      <form class="cliente-form" data-form>
+        <div class="form-group">
+          <label for="nombre">Nombre</label>
+          <input type="text" id="nombre" name="nombre" required data-nombre />
+        </div>
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" required data-email />
+        </div>
+        <button type="submit" class="btn-registrar">Guardar Cliente</button>
+      </form>
+    </section>
+  </main>
+  <script type="module" src="../controllers/clientes_form_controller.js"></script>
+</body>
+</html>

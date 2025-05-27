@@ -1,0 +1,132 @@
+body {
+    background: linear-gradient(120deg, #f5e9da 0%, #e9d5b4 100%);
+    font-family: 'Georgia', serif;
+    margin: 0;
+    padding: 0;
+    color: #3e2c18;
+}
+
+.header {
+    background: linear-gradient(90deg, #7c5e3c 70%, #4b7b50 100%);
+    color: #fffbe9;
+    padding: 1.5rem 0 1rem 0;
+    text-align: center;
+    box-shadow: 0 2px 12px rgba(60,40,20,0.10);
+    position: relative;
+}
+
+.header__logo {
+    width: 60px;
+    position: absolute;
+    left: 2rem;
+    top: 1.2rem;
+}
+
+.header__title {
+    margin: 0;
+    font-size: 2.2rem;
+    letter-spacing: 2px;
+    font-family: 'Georgia', serif;
+}
+
+.header__nav {
+    list-style: none;
+    padding: 0;
+    margin: 1rem 0 0 0;
+    display: flex;
+    justify-content: center;
+    gap: 2.5rem;
+}
+
+.header__nav li a {
+    color: #fffbe9;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.1rem;
+    transition: color 0.2s;
+}
+
+.header__nav li a:hover {
+    color: #bfa77a;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 80vh;
+    padding: 2rem 0;
+}
+
+.form-section {
+    background: #fffbe9;
+    border-radius: 18px;
+    box-shadow: 0 6px 32px rgba(60,40,20,0.13);
+    padding: 2.5rem 2.5rem 2rem 2.5rem;
+    max-width: 420px;
+    width: 100%;
+    margin-top: 2rem;
+    border: 2px solid #bfa77a;
+}
+
+.form-section h2 {
+    margin-top: 0;
+    color: #4b7b50;
+    font-weight: 700;
+    margin-bottom: 1.7rem;
+    text-align: center;
+    letter-spacing: 1px;
+}
+
+.libro-form .form-group {
+    margin-bottom: 1.3rem;
+}
+
+.libro-form label {
+    display: block;
+    margin-bottom: 0.4rem;
+    font-weight: 600;
+    color: #3e2c18;
+    letter-spacing: 0.5px;
+}
+
+.libro-form input,
+.libro-form textarea {
+    width: 100%;
+    padding: 0.7rem;
+    border: 1.5px solid #bfa77a;
+    border-radius: 8px;
+    background: #f5e9da;
+    font-size: 1rem;
+    color: #3e2c18;
+    transition: border-color 0.2s, box-shadow 0.2s;
+    font-family: inherit;
+    box-sizing: border-box;
+}
+
+.libro-form input:focus,
+.libro-form textarea:focus {
+    border-color: #4b7b50;
+    box-shadow: 0 0 0 2px #bfa77a44;
+    outline: none;
+}
+
+.btn-registrar {
+    width: 100%;
+    padding: 0.95rem;
+    background: linear-gradient(90deg, #4b7b50 60%, #bfa77a 100%);
+    color: #fffbe9;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.13rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.2s, box-shadow 0.2s;
+    margin-top: 1.2rem;
+    box-shadow: 0 2px 8px rgba(60,40,20,0.08);
+}
+
+.btn-registrar:hover {
+    background: linear-gradient(90deg, #3e2c18 60%, #4b7b50 100%);
+    box-shadow: 0 4px 16px rgba(60,40,20,0.13);
+}

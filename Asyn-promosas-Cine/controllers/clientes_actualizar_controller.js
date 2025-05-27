@@ -26,7 +26,6 @@ const obtenerInfo = async () => {
     }
 };
 obtenerInfo();
-//-----------------------------------------
 formulario.addEventListener("submit",(evento)=>{
     evento.preventDefault();
     const url = new URL(window.location)

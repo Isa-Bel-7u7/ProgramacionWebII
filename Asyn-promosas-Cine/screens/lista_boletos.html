@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Lista de Boletos</title>
+  <link rel="stylesheet" href="../assets/style_lista_boleto.css" />
+</head>
+<body>
+  <header class="header">
+    <h1 class="header__title">Lista de Boletos</h1>
+    <nav>
+      <ul class="header__nav">
+        <li><a href="index.html">Películas</a></li>
+        <li><a href="lista_clientes.html">Clientes</a></li>
+        <li><a href="lista_salas.html">Salas</a></li>
+        <li><a href="boletos.html">Registrar Boleto</a></li>
+        <li><a href="lista_boletos.html" class="active">Lista de Boletos</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="busqueda-section">
+      <input type="text" placeholder="Buscar por descripción, fecha, cliente..." data-buscador-boletos>
+      <button data-btn-buscar-boletos>Buscar</button>
+    </section>
+    <section class="tabla-section">
+      <table class="tabla-peliculas">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Fecha</th>
+            <th>Hora</th>
+            <th>Descripción</th>
+            <th>Película</th>
+            <th>Cliente</th>
+            <th>Sala</th>
+            <th>Acciones</th>
+          </tr>
+        </thead>
+        <tbody data-table>
+          <!-- Filas dinámicas con JS -->
+        </tbody>
+      </table>
+    </section>
+  </main>
+  <script type="module" src="../controllers/boletos_controller.js"></script>
+</body>
+</html>

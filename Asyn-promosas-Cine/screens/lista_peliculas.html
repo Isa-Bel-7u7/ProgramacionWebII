@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Lista de Películas</title>
+  <link rel="stylesheet" href="../assets/estilos_peliculas.css" />
+</head>
+<body>
+  <header class="header">
+    <h1>🎬 Películas en Cartelera</h1>
+    <nav>
+      <ul class="nav">
+        <li><a href="index.html">Registrar Película</a></li>
+        <li><a href="#">Clientes</a></li>
+        <li><a href="#">Boletos</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="busqueda-section">
+      <input type="text" id="buscador-peliculas" placeholder="Buscar por título, director o año...">
+      <button id="btn-buscar-peliculas" data-btn-buscar-peliculas >Buscar</button>
+    </section>
+
+    <section class="tabla-section">
+      <table class="tabla-peliculas">
+        <thead>
+          <tr>
+            <th>Título</th>
+            <th>Director</th>
+            <th>Año</th>
+            <th>Precio</th>
+            <th>Hora Inicio</th>
+            <th>Hora Fin</th>
+            <th>Sala</th>
+            <th>Acciones</th>
+          </tr>
+        </thead>
+        <tbody id="tabla-peliculas-body" data-table >
+          <!-- Aquí se insertarán dinámicamente las filas con JavaScript -->
+        </tbody>
+      </table>
+    </section>
+  </main>
+
+  <script type="module" src="../controllers/peliculas_controller.js"></script>
+</body>
+</html>

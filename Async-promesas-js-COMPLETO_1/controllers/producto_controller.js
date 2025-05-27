@@ -52,21 +52,3 @@ productoService.listarProductos()
         });
     })
     .catch(error => alert("Ocurrió un error al cargar los productos"));
-
-
-// Buscador
-const buscador = document.querySelector('#buscador-productos');
-const btnBuscar = document.querySelector('#btn-buscar-productos');
-const tabla = document.querySelector('[data-table]');
-
-function filtrarProductos() {
-    const filtro = buscador.value.toLowerCase();
-    const filas = tabla.querySelectorAll('tr');
-    filas.forEach(fila => {
-        const textoFila = fila.textContent.toLowerCase();
-        fila.style.display = textoFila.includes(filtro) ? '' : 'none';
-    });
-}
-
-buscador.addEventListener('input', filtrarProductos);
-btnBuscar.addEventListener('click', filtrarProductos);

@@ -50,18 +50,6 @@ clientService.listaclientes()
 }).catch((error)=>alert("error"));
 */
 
-//buscador 
-const buscador = document.querySelector('#buscador-clientes');
-const tabla = document.querySelector('[data-table]');
-
-buscador.addEventListener('input', function() {
-    const filtro = buscador.value.toLowerCase();
-    const filas = tabla.querySelectorAll('tr');
-    filas.forEach(fila => {
-        const textoFila = fila.textContent.toLowerCase();
-        fila.style.display = textoFila.includes(filtro) ? '' : 'none';
-    });
-});
 
 
 // _----------- mejorado codigo ordenado limpio--------------
